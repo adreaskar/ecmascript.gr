@@ -13,7 +13,15 @@
         - [Specification](#specification)
         - [MDN Web Docs](#mdn-web-docs)
     - [Compiled ή Interpreted;](#compiled-ή-interpreted)
-2. [Τύποι Δεδομένων](#τύποι-δεδομένων)
+2. [Μεταβλητές](#μεταβλητές)
+    - [Δήλωση Μεταβλητών](#δήλωση-μεταβλητών)
+    - [Ανάθεση Τιμής](#ανάθεση-τιμής)
+    - [Εμβέλεια](#εμβέλεια)
+        - [var](#var)
+        - [let](#let)
+        - [const](#const)
+    - [ES6 Μεταβλητές](#es6-μεταβλητές)
+3. [Τύποι Δεδομένων](#τύποι-δεδομένων)
     - [typeof](#typeof)
     - [Primitive Types](#primitive-types)
         - [Number](#number)
@@ -31,11 +39,6 @@
         - [Truthy & Falsy](#truthy-falsy)
         - [Χαλαρή Ισότητα](#χαλαρή-ισότητα)
         - [Αυστηρή Ισότητα](#αυστηρή-ισότητα)
-3. [Μεταβλητές](#μεταβλητές)
-    - [Δήλωση Μεταβλητών](#δήλωση-μεταβλητών)
-    - [Ανάθεση Τιμής](#ανάθεση-τιμής)
-    - [Εμβέλεια](#εμβέλεια)
-    - [ES6 Μεταβλητές](#es6-μεταβλητές)
 4. [Συνθήκες](#συνθήκες)
 5. [Επαναλήψεις](#επαναλήψεις)
     - [for](#for)
@@ -106,6 +109,174 @@ _Σαν προγραμματιστές έχουμε την ευθύνη να γ�
 
 Έτσι, η απάντηση στην ερώτηση _<ins>"Η JavaScript είναι compiled ή interpreted γλώσσα;"</ins>_ είναι λίγο και από τα δύο. Είναι interpreted σε παλαιότερα προγράμματα περιήγησης, αλλά στα σύγχρονα προγράμματα περιήγησης, γίνεται compile με τη βοήθεια ενός JIT compiler.
 
+<br />
+
+# Μεταβλητές
+
+Οι μεταβλητές είναι οι βασικές μονάδες αποθήκευσης πληροφορίας σε ένα πρόγραμμα. Μια μεταβλητή είναι ένα όνομα (label) που αναφέρεται σε μια τιμή.
+
+<br />
+
+## Δήλωση Μεταβλητών
+
+Στην JavaScript, οι μεταβλητές δηλώνονται με την εντολή `var`. Μπορούμε να δηλώσουμε μια μεταβλητή χωρίς να της αναθέσουμε τιμή, αλλά αυτό σημαίνει ότι η τιμή της μεταβλητής θα είναι `undefined`.
+
+<!-- prettier-ignore -->
+```javascript
+var x;                  // Δήλωση μεταβλητής
+console.log(x);         // undefined
+```
+
+<br />
+
+## Ανάθεση Τιμής
+
+Μια μεταβλητή μπορεί να περιέχει οποιαδήποτε τιμή, όπως αριθμούς, αλφαριθμητικά, boolean, κλπ.
+
+<!-- prettier-ignore -->
+```javascript
+var x = 5;              // Ταυτόχρονη δήλωση και ανάθεση αριθμητικής τιμής
+var y = "Hello";        // Αλφαριθμητική τιμή
+var z = true;           // Boolean τιμή
+
+console.log(x);         // 5
+console.log(y);         // "Hello"
+console.log(z);         // true
+```
+
+<br />
+
+## Εμβέλεια
+
+Η εμβέλεια μιας μεταβλητής αναφέρεται στο πόσο μακριά από το σημείο δήλωσης της μπορεί να χρησιμοποιηθεί. Οι μεταβλητές που δηλώνονται μπορεί να έχουν είτε `τοπική (local)` εμβέλεια, είτε `καθολική (global)` εμβέλεια.
+
+<br />
+
+### var
+
+---
+
+Οι μεταβλητές που δηλώνονται με το με το λεκτικό `var` έχουν είτε global εμβέλεια, είτε εμβέλεια στα πλαίσια μιας συνάρτησης, ανάλογα με το σημείο δήλωσης τους.
+
+<!-- prettier-ignore -->
+```javascript
+var x = 5;              // Global μεταβλητή
+
+function myFunction() {
+  var y = 10;           // Local μεταβλητή
+  console.log(x);       // 5
+  console.log(y);       // 10
+}
+
+console.log(x);         // 5
+console.log(y);         // ReferenceError: y is not defined
+```
+
+<br />
+
+> **Παρατήρηση:** Αν μια μεταβλητή var δηλώνεται μέσα σε ένα code block (π.χ. μέσα σε ένα if statement), τότε η εμβέλεια της μεταβλητής δεν περιορίζεται στο block αυτό, αλλά είναι η συνάρτηση στην οποία ανήκει το code block. Αν το code block δεν ανήκει σε κάποια συνάρτηση, τότε η μεταβλητή έχει global εμβέλεια.
+
+<!-- prettier-ignore -->
+```javascript
+if (true) {
+  var x = 5;            // Η x έχει global εμβέλεια
+}
+
+function myFunction() {
+    if (true) {
+        var y = 10;     // Η y έχει local εμβέλεια στην myFunction
+    }
+}
+
+console.log(x);         // 5
+console.log(y);         // ReferenceError: y is not defined
+```
+
+<br />
+
+### let
+
+---
+
+Η εντολή `let` εισήχθη στην ES6 και χρησιμοποιείται για τη δήλωση μεταβλητών με block scope. Αυτό σημαίνει ότι οι μεταβλητές που δηλώνονται με το λεκτικό `let` έχουν εμβέλεια μόνο στο block στο οποίο δηλώνονται.
+
+<!-- prettier-ignore -->
+```javascript
+let x = 5;              // Global μεταβλητή
+
+function myFunction() {
+    let y = 10;         // Local μεταβλητή
+    console.log(x);     // 5
+    console.log(y);     // 10
+
+    for (let i = 0; i < 5; i++) {
+        console.log(i); // Local μεταβλητή i
+    }
+
+    console.log(i);     // ReferenceError: i is not defined
+}
+
+console.log(x);         // 5
+console.log(y);         // ReferenceError: y is not defined
+```
+
+Επίσης μια μεταβλητή που δηλώνεται με το λεκτικό `let` δεν μπορεί να ξαναδηλωθεί μέσα στο ίδιο block, κάτι το οποίο είναι δυνατό με το λεκτικό `var`.
+
+<!-- prettier-ignore -->
+```javascript
+let x = 5;
+let x = 10;             // SyntaxError: Identifier 'x' has already been declared
+```
+
+<br />
+
+### const
+
+---
+
+Η εντολή `const` χρησιμοποιείται για τη δήλωση μεταβλητών με block scope, οι οποίες δεν μπορούν να αλλάξουν τιμή μετά την αρχική ανάθεση.
+
+<!-- prettier-ignore -->
+```javascript
+const x = 5;            // Η x είναι μια σταθερά
+
+x = 10;                 // TypeError: Assignment to constant variable
+```
+
+Όπως και με το `let`, μια μεταβλητή που δηλώνεται με το λεκτικό `const` δεν μπορεί να ξαναδηλωθεί μέσα στο ίδιο block.
+
+<!-- prettier-ignore -->
+```javascript
+const x = 5;
+const x = 10;           // SyntaxError: Identifier 'x' has already been declared
+```
+
+Μια μεταβλητή που δηλώνεται με το λεκτικό `const` πρέπει να αρχικοποιηθεί με μια τιμή.
+
+<!-- prettier-ignore -->
+```javascript
+const x;                // SyntaxError: Missing initializer in const declaration
+```
+
+Το λεκτικό `const` είναι λίγο παραπλανητικό. Στην ουσία δεν ορίζει μία σταθερή τιμή, αλλά μια σταθερή αναφορά σε μια τιμή.
+
+Αυτό σημαίνει οτι ΔΕΝ μπορούμε να:
+
+- Εκχωρήσουμε ξανά μια constant τιμή
+- Εκχωρήσουμε ξανά ένα constant πίνακα
+- Εκχωρήσουμε ξανά ένα constant αντικειμένο
+
+Αλλά μπορούμε να:
+
+- Αλλάξουμε τα στοιχεία του constant πίνακα
+- Αλλάξουμε τις ιδιότητες του constant αντικειμένου
+
+<br />
+
+> **Παρατήρηση:** Με την εισαγωγή των `let` και `const` στην ES6, η χρήση του `var` έχει μειωθεί σημαντικά. Συνιστάται να χρησιμοποιείς `let` για μεταβλητές που μπορεί να αλλάξουν τιμή και `const` για σταθερές.
+
+<br />
+
 # Τύποι Δεδομένων
 
 H JavaScript είναι μια γλώσσα <u>δυναμικού τύπου</u>, που σημαίνει οτι στις μεταβλητές εισάγουμε δεδομένα χωρίς να χρειάζεται να δηλώσουμε τον τύπο τους. Μια μεταβλητή μπορεί να περιέχει δεδομένα διαφορετικού τύπου κατά τη διάρκεια της εκτέλεσης του προγράμματος.
@@ -114,8 +285,8 @@ H JavaScript είναι μια γλώσσα <u>δυναμικού τύπου</u>
 
 <!-- prettier-ignore -->
 ```javascript
-var x = 5;              // Η x είναι τύπου Number
-x = "Hello";            // Η x τώρα είναι τύπου String
+const x = 5;            // Η τιμή της x είναι τύπου Number
+x = "Hello";            // Η τιμή της x τώρα είναι τύπου String
 ```
 
 <br />
@@ -125,7 +296,7 @@ x = "Hello";            // Η x τώρα είναι τύπου String
 Για να μάθουμε τον τύπο μιας τιμής μπορούμε να χρησιμοποιήσουμε τον operator `typeof`. Αυτή η εντολή επιστρέφει τον τύπο της τιμής σε μορφή string.
 
 ```javascript
-var x = 5;
+const x = 5;
 console.log(typeof x); // "number"
 ```
 
@@ -145,8 +316,8 @@ console.log(typeof x); // "number"
 
 <!-- prettier-ignore -->
 ```javascript
-var x = 5;              // Ακέραιος αριθμός
-var y = 5.5;            // Δεκαδικός αριθμός
+const x = 5;            // Ακέραιος αριθμός
+const y = 5.5;          // Δεκαδικός αριθμός
 
 console.log(typeof x);  // "number"
 console.log(typeof y);  // Επίσης "number"
@@ -160,10 +331,10 @@ console.log(typeof y);  // Επίσης "number"
 
 <!-- prettier-ignore -->
 ```javascript
-var x = 1 / 0;
+const x = 1 / 0;
 console.log(x);         // Infinity
 
-var y = -1 / 0;
+const y = -1 / 0;
 console.log(y);         // -Infinity
 
 console.log(typeof x);  // "number"
@@ -176,7 +347,7 @@ console.log(typeof y);  // Επίσης "number"
 
 <!-- prettier-ignore -->
 ```javascript
-var x = 100 / "Apple";
+const x = 100 / "Apple";
 console.log(x);         // NaN
 
 console.log(typeof(x)); // "number"
@@ -192,7 +363,7 @@ console.log(typeof(x)); // "number"
 
 <!-- prettier-ignore -->
 ```javascript
-var x = 100 / "Apple";
+const x = 100 / "Apple";
  
 isNaN(x);               // true
 ```
@@ -201,7 +372,7 @@ isNaN(x);               // true
 
 <!-- prettier-ignore -->
 ```javascript
-var x = "100";
+const x = "100";
 
 isNaN(x);               // false
 ```
@@ -212,8 +383,8 @@ isNaN(x);               // false
 
 <!-- prettier-ignore -->
 ```javascript
-var x = "bar" / "foo";
-var y = NaN;
+const x = "bar" / "foo";
+const y = NaN;
 
 Number.isNaN(x);        // true
 Number.isNaN(y);        // true
@@ -229,7 +400,7 @@ Number.isNaN(y);        // true
 
 <!-- prettier-ignore -->
 ```javascript
-var x = "Hello World!";
+const x = "Hello World!";
 console.log(typeof x);  // "string"
 ```
 
@@ -237,8 +408,8 @@ console.log(typeof x);  // "string"
 
 <!-- prettier-ignore -->
 ```javascript
-var x = 'Hello World!';
-var y = "Hello World!";
+const x = 'Hello World!';
+const y = "Hello World!";
 ```
 
 <br />
@@ -247,7 +418,7 @@ var y = "Hello World!";
 
 <!-- prettier-ignore -->
 ```javascript
-var x = "He said \"Hello\"";
+const x = "He said \"Hello\"";
 console.log(x);         // He said "Hello"
 ```
 
@@ -261,8 +432,8 @@ console.log(x);         // He said "Hello"
 
 <!-- prettier-ignore -->
 ```javascript
-var x = true;
-var y = false;
+const x = true;
+const y = false;
 
 console.log(typeof x);  // "boolean"
 console.log(typeof y);  // Επίσης "boolean"
@@ -282,10 +453,10 @@ var x;
 console.log(x);         // undefined
 console.log(typeof x);  // "undefined"
 
-var y = undefined;
+const y = undefined;
 console.log(y);         // undefined
 
-var arr = [1, 2, 3];
+const arr = [1, 2, 3];
 console.log(arr[3]);    // undefined
 
 function foo() {
@@ -305,7 +476,7 @@ console.log(foo());     // undefined
 
 <!-- prettier-ignore -->
 ```javascript
-var x = null;
+const x = null;
 console.log(x);         // null
 console.log(typeof x);  // "object"  (???)
 ```
@@ -316,8 +487,6 @@ console.log(typeof x);  // "object"  (???)
 <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--5XFJVMi_--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://cdn.hashnode.com/res/hashnode/image/upload/v1627256711813/d4FV_NtKb.jpeg" alt="null typeof bug" width="250px"/>
 </p>
 
-<br />
-
 ### BigInt
 
 ---
@@ -326,7 +495,7 @@ console.log(typeof x);  // "object"  (???)
 
 <!-- prettier-ignore -->
 ```javascript
-var x = 237n;
+const x = 237n;
 console.log(x);         // 237n
 console.log(typeof x);  // "bigint"
 ```
@@ -341,17 +510,31 @@ console.log(typeof x);  // "bigint"
 
 <!-- prettier-ignore -->
 ```javascript
-var x = Symbol("Hello");
+const x = Symbol("Hello");
 console.log(x);         // Symbol(Hello)
 console.log(typeof x);  // "symbol"
 
-var y = Symbol("Hello");
+const y = Symbol("Hello");
 console.log(x === y);   // false
 
-var z = Symbol("World");
+const z = Symbol("World");
 console.log(x === z);   // false
 ```
 
 <br />
 
 ## Objects
+
+Ο τύπος `Object` χρησιμοποιείται για τη δημιουργία αντικειμένων. Ένα αντικείμενο είναι μια συλλογή από ζεύγη κλειδιών-τιμών.
+
+<!-- prettier-ignore -->
+```javascript
+const person = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+
+console.log(person);    // { name: "John", age: 30, city: "New York" }
+console.log(typeof person); // "object"
+```
