@@ -114,9 +114,11 @@ H JavaScript είναι μια γλώσσα <u>δυναμικού τύπου</u>
 
 <!-- prettier-ignore -->
 ```javascript
-var x = 5;   // Η x είναι τύπου Number
-x = "Hello"; // Η x τώρα είναι τύπου String
+var x = 5;              // Η x είναι τύπου Number
+x = "Hello";            // Η x τώρα είναι τύπου String
 ```
+
+<br />
 
 ## typeof
 
@@ -127,9 +129,13 @@ var x = 5;
 console.log(typeof x); // "number"
 ```
 
+<br />
+
 ## Primitive Types
 
 Η JavaScript έχει κάποιους προκαθορισμένους τύπους δεδομένων, οι οποίοι ονομάζονται Primitive Data Types. Αυτοί οι τύποι είναι οι εξής:
+
+<br />
 
 ### Number
 
@@ -142,11 +148,13 @@ console.log(typeof x); // "number"
 var x = 5;              // Ακέραιος αριθμός
 var y = 5.5;            // Δεκαδικός αριθμός
 
-console.log(typeof x); // "number"
-console.log(typeof y); // Επίσης "number"
+console.log(typeof x);  // "number"
+console.log(typeof y);  // Επίσης "number"
 ```
 
 Δύο ειδικές τιμές που μπορούν να αντιστοιχιστούν στον τύπο Number είναι το `Infinity` και το `NaN`.
+
+<br />
 
 Το `Infinity` χρησιμοποιείται όταν ένας αριθμός υπερβαίνει το μέγιστο επιτρεπτό όριο.
 
@@ -162,6 +170,8 @@ console.log(typeof x);  // "number"
 console.log(typeof y);  // Επίσης "number"
 ```
 
+<br />
+
 Το `NaN` (Not-a-Number) χρησιμοποιείται όταν μια αριθμητική πράξη δεν μπορεί να εκτελεστεί (Invalid Number). Καλή πρακτική είναι να ελέγχουμε αν μια τιμή είναι `NaN` πριν την χρησιμοποιήσουμε.
 
 <!-- prettier-ignore -->
@@ -172,7 +182,11 @@ console.log(x);         // NaN
 console.log(typeof(x)); // "number"
 ```
 
+<br />
+
 > **Παρατήρηση:** Το `NaN` είναι η μόνη τιμή στην JavaScript που δεν είναι ίση με τον εαυτό της. Αυτό σημαίνει ότι `NaN !== NaN`.
+
+<br />
 
 Για να ελέγξουμε αν μια τιμή δεν είναι αριθμός ή δεν μπορεί να μετατραπεί σε αριθμό (περισσότερα στο κεφάλαιο "Αλλαγή Τύπου"), μπορούμε να χρησιμοποιήσουμε την συνάρτηση `isNaN()`.
 
@@ -192,6 +206,8 @@ var x = "100";
 isNaN(x);               // false
 ```
 
+<br />
+
 Μπορούμε επίσης να χρησιμοποιήσουμε την συνάρτηση `Number.isNaN()` για να ελέγξουμε αν μια τιμή είναι αμιγώς `NaN`.
 
 <!-- prettier-ignore -->
@@ -203,6 +219,8 @@ Number.isNaN(x);        // true
 Number.isNaN(y);        // true
 ```
 
+<br />
+
 ### String
 
 ---
@@ -212,7 +230,7 @@ Number.isNaN(y);        // true
 <!-- prettier-ignore -->
 ```javascript
 var x = "Hello World!";
-console.log(typeof x); // "string"
+console.log(typeof x);  // "string"
 ```
 
 Μπορούμε να χρησιμοποιήσουμε είτε μονά είτε διπλά εισαγωγικά για να δηλώσουμε μια τιμή τύπου `String`.
@@ -223,13 +241,17 @@ var x = 'Hello World!';
 var y = "Hello World!";
 ```
 
+<br />
+
 Αν θέλουμε να χρησιμοποιήσουμε εισαγωγικά μέσα σε μια τιμή τύπου `String`, μπορούμε να χρησιμοποιήσουμε τον χαρακτήρα `\` για να δηλώσουμε ότι το εισαγωγικό δεν είναι το τέλος της τιμής.
 
 <!-- prettier-ignore -->
 ```javascript
 var x = "He said \"Hello\"";
-console.log(x); // He said "Hello"
+console.log(x);         // He said "Hello"
 ```
+
+<br />
 
 ### Boolean
 
@@ -242,9 +264,11 @@ console.log(x); // He said "Hello"
 var x = true;
 var y = false;
 
-console.log(typeof x); // "boolean"
-console.log(typeof y); // Επίσης "boolean"
+console.log(typeof x);  // "boolean"
+console.log(typeof y);  // Επίσης "boolean"
 ```
+
+<br />
 
 ### Undefined
 
@@ -255,21 +279,23 @@ console.log(typeof y); // Επίσης "boolean"
 <!-- prettier-ignore -->
 ```javascript
 var x;
-console.log(x);        // undefined
-console.log(typeof x); // "undefined"
+console.log(x);         // undefined
+console.log(typeof x);  // "undefined"
 
 var y = undefined;
-console.log(y);        // undefined
+console.log(y);         // undefined
 
 var arr = [1, 2, 3];
-console.log(arr[3]);   // undefined
+console.log(arr[3]);    // undefined
 
 function foo() {
   return;
 }
 
-console.log(foo());    // undefined
+console.log(foo());     // undefined
 ```
+
+<br />
 
 ### Null
 
@@ -280,15 +306,17 @@ console.log(foo());    // undefined
 <!-- prettier-ignore -->
 ```javascript
 var x = null;
-console.log(x);        // null
-console.log(typeof x); // "object"  (???)
+console.log(x);         // null
+console.log(typeof x);  // "object"  (???)
 ```
 
 > **Παρατήρηση:** Η τιμή `null` επιστρέφει `"object"` όταν χρησιμοποιήσουμε τον operator `typeof`. Αυτό είναι ένα bug στην JavaScript που υπάρχει απο τις πρώτες κιόλας εκδόσεις της γλώσσας. Αυτό το bug διατηρείται μέχρι και σημερα για λόγους συμβατότητας με παλαιότερες εκδόσεις της γλώσσας.
 
-<center>
+<p align="center">
 <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--5XFJVMi_--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://cdn.hashnode.com/res/hashnode/image/upload/v1627256711813/d4FV_NtKb.jpeg" alt="null typeof bug" width="250px"/>
-</center>
+</p>
+
+<br />
 
 ### BigInt
 
@@ -299,9 +327,11 @@ console.log(typeof x); // "object"  (???)
 <!-- prettier-ignore -->
 ```javascript
 var x = 237n;
-console.log(x);        // 237n
-console.log(typeof x); // "bigint"
+console.log(x);         // 237n
+console.log(typeof x);  // "bigint"
 ```
+
+<br />
 
 ### Symbol
 
@@ -312,14 +342,16 @@ console.log(typeof x); // "bigint"
 <!-- prettier-ignore -->
 ```javascript
 var x = Symbol("Hello");
-console.log(x);        // Symbol(Hello)
-console.log(typeof x); // "symbol"
+console.log(x);         // Symbol(Hello)
+console.log(typeof x);  // "symbol"
 
 var y = Symbol("Hello");
-console.log(x === y);  // false
+console.log(x === y);   // false
 
 var z = Symbol("World");
-console.log(x === z);  // false
+console.log(x === z);   // false
 ```
+
+<br />
 
 ## Objects
