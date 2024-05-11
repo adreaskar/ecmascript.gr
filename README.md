@@ -70,7 +70,15 @@
     - [Δημιουργία Στοιχείων](#δημιουργία-στοιχείων)
     - [Αφαίρεση Στοιχείων](#αφαίρεση-στοιχείων)
     - [Event Listeners](#event-listeners)
-9. [Πηγές](#πηγές)
+
+[Χρήσιμες Πηγές](#χρήσιμες-πηγές)
+
+Μελλοντικά θα προστεθούν και άλλα κεφάλαια στον οδηγό.
+
+- [ ] Closure
+- [ ] Ασύγχρονος Προγραμματισμός
+- [ ] Μέθοδοι Πίνακα
+- ...
 
 # Εισαγωγή
 
@@ -1545,3 +1553,12 @@ button.addEventListener("click", handleClick);
 
 button.removeEventListener("click", handleClick);
 ```
+
+# Χρήσιμες Πηγές
+
+- [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS)
+- [JavaScript.info](https://javascript.info/)
+- [Free Programming JavaScript Books](https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#javascript)
+- [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
+- [Eloquent JavaScript](https://eloquentjavascript.net/)
+- [Optimizing Javascript](https://romgrk.com/posts/optimizing-javascript)
