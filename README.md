@@ -1561,3 +1561,5 @@ button.removeEventListener("click", handleClick);
 - [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
 - [Eloquent JavaScript](https://eloquentjavascript.net/)
 - [Optimizing Javascript](https://romgrk.com/posts/optimizing-javascript)
+- [JavaScript Roadmap](https://roadmap.sh/javascript)
+- [The Frontend Developer Handbook](https://frontendmasters.com/guides/front-end-handbook/2024/)
