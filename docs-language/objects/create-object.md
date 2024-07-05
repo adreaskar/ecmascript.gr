@@ -1,0 +1,28 @@
+---
+sidebar_position: 2
+---
+
+# Δημιουργία Αντικειμένου
+
+Για να δημιουργήσουμε ένα αντικείμενο, χρησιμοποιούμε τις αγκύλες `{}`.
+
+<!-- prettier-ignore -->
+```javascript
+const person = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+```
+
+Το παραπάνω αντικείμενο έχει τρείς ιδιότητες (κλειδιά): `name`, `age` και `city`. Κάθε ιδιότητα αντιστοιχίζεται σε μια τιμή.
+
+Εναλλακτικός τρόπος δημιουργίας αντικειμένου είναι με τη χρήση της μεθόδου `Object()`.
+
+<!-- prettier-ignore -->
+```javascript
+const person = new Object();
+person.name = "John";           // person = { name: "John" }
+person.age = 30;                // person = { name: "John", age: 30 }
+person.city = "New York";       // person = { name: "John", age: 30, city: "New York" } 
+```

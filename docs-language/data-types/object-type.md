@@ -1,0 +1,23 @@
+---
+sidebar_position: 3
+---
+
+# Τύπος Object
+
+Ο τύπος `Object` είναι ένας ειδικός τύπος και χρησιμοποιείται για τη δημιουργία αντικειμένων. Ένα αντικείμενο στην JavaScript είναι μια συλλογή από ζεύγη κλειδιών-τιμών.
+
+<!-- prettier-ignore -->
+```javascript
+const person = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+
+console.log(person);        // { name: "John", age: 30, city: "New York" }
+console.log(typeof person); // "object"
+```
+
+Σε αυτή τη κατηγορία ανήκουν επίσης οι `Πίνακες (Arrays)` και οι `Συναρτήσεις (Functions)`, τα οποία θα μελετήσουμε σε επόμενα κεφάλαια.
+
+Περισσότερα για τα Objects θα δούμε στο κεφάλαιο "Αντικείμενα".
