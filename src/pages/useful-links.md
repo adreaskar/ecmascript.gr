@@ -1,4 +1,6 @@
-Παρακάτω θα βρείς μερικά χρήσιμα links για την JavaScript αλλά και γενικότερα για Web Development.
+Παρακάτω υπάρχουν μερικά χρήσιμα links για την JavaScript αλλά και γενικότερα για Web Development.
+
+Ο οδηγός αυτός έχει βασιστεί σε μεγάλο βαθμό σε αυτές τις πηγές.
 
 -   [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS)
 -   [JavaScript.info](https://javascript.info/)
