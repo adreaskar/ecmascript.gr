@@ -10,18 +10,18 @@ import { themes as prismThemes } from 'prism-react-renderer';
 const config = {
     title: 'ecmascript.gr',
     tagline: 'Οδηγός για την JavaScript στα Ελληνικά',
-    favicon: 'img/ecma-logo.png',
+    favicon: 'img/ecmascript.png',
 
     // Set the production url of your site here
-    url: 'https://your-docusaurus-site.example.com',
+    url: 'https://ecmascript.gr',
     // Set the /<baseUrl>/ pathname under which your site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
     baseUrl: '/',
 
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
-    organizationName: 'facebook', // Usually your GitHub org/user name.
-    projectName: 'docusaurus', // Usually your repo name.
+    organizationName: 'adreaskar', // Usually your GitHub org/user name.
+    projectName: 'ecmascript.gr', // Usually your repo name.
 
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
@@ -30,8 +30,8 @@ const config = {
     // useful metadata like html lang. For example, if your site is Chinese, you
     // may want to replace "en" with "zh-Hans".
     i18n: {
-        defaultLocale: 'en',
-        locales: ['en'],
+        defaultLocale: 'el-GR',
+        locales: ['el-GR'],
     },
 
     // Plugins for TailwindCSS and PostCSS.
@@ -98,29 +98,22 @@ const config = {
             // Replace with your project's social card
             image: 'img/docusaurus-social-card.jpg',
             navbar: {
-                title: 'ecmascript.gr',
                 logo: {
-                    alt: 'My Site Logo',
-                    src: 'img/ecma-logo.png',
+                    alt: 'ecmascript.gr logo',
+                    src: 'img/ecmascript.png',
                 },
                 items: [
-                    // {
-                    //     type: 'docSidebar',
-                    //     sidebarId: 'basicSidebar',
-                    //     position: 'left',
-                    //     label: 'Οδηγός',
-                    // },
                     {
                         label: '1. Γλώσσα',
                         to: 'docs-language/intro',
                         position: 'left',
-                        docsPluginId: 'language',
+                        docspluginid: 'language',
                     },
                     {
                         label: '2. Browser',
                         to: 'docs-browser/intro',
                         position: 'left',
-                        docsPluginId: 'browser',
+                        docspluginid: 'browser',
                     },
                     {
                         to: '/useful-links',
@@ -132,7 +125,7 @@ const config = {
                         position: 'right',
                     },
                     {
-                        href: 'https://github.com/adreaskar/javascript-handbook',
+                        href: 'https://github.com/adreaskar/ecmascript.gr',
                         label: 'GitHub',
                         position: 'right',
                     },
