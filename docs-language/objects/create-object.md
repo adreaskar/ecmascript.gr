@@ -26,3 +26,5 @@ person.name = "John";           // person = { name: "John" }
 person.age = 30;                // person = { name: "John", age: 30 }
 person.city = "New York";       // person = { name: "John", age: 30, city: "New York" } 
 ```
+
+Με αυτόν τον τρόπο, δημιουργούμε ένα κενό αντικείμενο και έπειτα προσθέτουμε ιδιότητες χρησιμοποιώντας τον τελεστή `.`.

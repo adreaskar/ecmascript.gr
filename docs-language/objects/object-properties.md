@@ -43,7 +43,8 @@ const person = {
 person.job = "Developer";
 person["salary"] = 50000;
 
-console.log(person);    // { name: "John", age: 30, city: "New York", job: "Developer", salary: 50000 }
+console.log(person);    
+// { name: "John", age: 30, city: "New York", job: "Developer", salary: 50000 }
 ```
 
 ## Διαγραφή Ιδιοτήτων

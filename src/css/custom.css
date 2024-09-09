@@ -19,7 +19,8 @@
     --ifm-color-primary-light: #eea703;
     --ifm-color-primary-lighter: #359962;
     --ifm-color-primary-lightest: #3cad6e;
-    --ifm-color-grey: #f1f0f0;
+    --ifm-color-grey: #fbfbfb;
+    --ifm-border-color: #eaeaea;
     --ifm-code-font-size: 95%;
     --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
@@ -35,6 +36,7 @@
     --ifm-color-primary-lighter: #32d8b4;
     --ifm-color-primary-lightest: #4fddbf;
     --ifm-color-grey: #242526;
+    --ifm-border-color: #404141;
     --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
@@ -100,6 +102,12 @@ h3 {
 /* Custom code block style */
 .token.keyword {
     font-style: normal !important;
+}
+
+/* Themed images for md */
+[data-theme='light'] img[src$='#es-dark-mode-only'],
+[data-theme='dark'] img[src$='#es-light-mode-only'] {
+    display: none;
 }
 
 /* Media queries */

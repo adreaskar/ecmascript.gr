@@ -23,5 +23,12 @@ const job = {
 
 person.job = job;
 
-console.log(person);    // { name: "John", age: 30, city: "New York", job: { title: "Developer", salary: 50000 } }
+console.log(person);    
+
+// { 
+//   name: "John", age: 30, city: "New York", 
+//   job: { 
+//        title: "Developer", salary: 50000 
+//   }  
+// }
 ```

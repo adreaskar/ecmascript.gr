@@ -2,7 +2,6 @@
     "label": "Αντικείμενα",
     "position": 4,
     "link": {
-        "type": "generated-index",
-        "description": ""
+        "type": "generated-index"
     }
 }
