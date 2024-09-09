@@ -50,17 +50,27 @@ function HeroText() {
                 Από τις βασικές έννοιες έως και προχωρημένα θέματα, με
                 λεπτομερείς εξηγήσεις και παραδείγματα.
             </p>
-            <span className="text-xl lg:text-2xl">Επίσης διαθέσιμο στο: </span>
+            <span className="text-xl lg:text-2xl">
+                Χρησιμοποιούμε JavaScript για:{' '}
+            </span>
             <br className="md:hidden" />
-            <span className="w-full mt-7 text-[var(--ifm-color-primary-light)] text-xl lg:text-2xl ">
+            <span className="w-full mt-7 text-[var(--ifm-color-primary-light)] font-semibold text-xl lg:text-2xl ">
                 <Typewriter
                     words={[
-                        'javascript.gr',
-                        'typescript.gr',
-                        'angularjs.gr',
-                        'reactjs.gr',
-                        'vuejs.gr',
-                        'coffeescript.gr',
+                        'κατασκευή ιστοσελίδων',
+                        'ανάπτυξη web εφαρμογών ',
+                        'δημιουργία διαδραστικών διεπαφών',
+                        'τη διαχείριση του DOM',
+                        'επικύρωση φορμών',
+                        'χειρισμό διάφορων events',
+                        'ασύγχρονο προγραμματισμό',
+                        'οπτικοποίηση δεδομένων',
+                        'δημιουργία RESTful API',
+                        'ανάπτυξη κινητών εφαρμογών',
+                        'επικοινωνία σε πραγματικό χρόνο',
+                        'Front-End',
+                        'Back-End',
+                        'Full-Stack!',
                     ]}
                     loop={0}
                     cursor

@@ -24,7 +24,7 @@ const FeatureList = [
         link: '/docs-browser/intro',
     },
     {
-        title: 'Περισσότερα κεφάλαια σύντομα',
+        title: 'Περισσότερα σύντομα',
         Icon: <Rss strokeWidth={2.25} />,
         description: (
             <>
@@ -40,7 +40,15 @@ function Feature({ Icon, title, description, link }) {
     return (
         <a
             href={link}
-            className="w-full flex-1 p-5 bg-[var(--ifm-color-grey)] rounded-lg text-[var(--ifm-hero-text-color)] hover:no-underline"
+            className="w-full flex-1 p-5 rounded-lg border-solid border-[var(--ifm-border-color)]
+            bg-[var(--ifm-color-grey)] 
+            text-[var(--ifm-hero-text-color)] 
+            hover:no-underline
+            hover:text-[var(--ifm-hero-text-color)]
+            hover:border-solid
+            hover:border-[var(--ifm-color-primary-light)]
+            transition-all
+            duration-300"
         >
             <div className="text-left text-[var(--ifm-color-primary-light)] mb-2">
                 {Icon}
@@ -55,7 +63,7 @@ function Feature({ Icon, title, description, link }) {
 
 export default function HomepageFeatures() {
     return (
-        <section className="items-center py-20 px-0 w-full">
+        <section className="items-center py-20 px-5 lg:px-2 w-full">
             <div className="container">
                 <div className="row gap-10">
                     {FeatureList.map((props, idx) => (
