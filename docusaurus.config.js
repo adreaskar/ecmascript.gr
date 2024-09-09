@@ -138,8 +138,12 @@ const config = {
                         title: 'Docs',
                         items: [
                             {
-                                label: 'Tutorial',
-                                to: '/docs/intro',
+                                label: '1. Γλώσσα',
+                                to: '/docs-language/intro',
+                            },
+                            {
+                                label: '2. Brower',
+                                to: '/docs-browser/intro',
                             },
                         ],
                     },
@@ -147,29 +151,29 @@ const config = {
                         title: 'Community',
                         items: [
                             {
-                                label: 'Stack Overflow',
-                                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                                label: 'Coming soon...',
+                                to: '/',
                             },
-                            {
-                                label: 'Discord',
-                                href: 'https://discordapp.com/invite/docusaurus',
-                            },
-                            {
-                                label: 'Twitter',
-                                href: 'https://twitter.com/docusaurus',
-                            },
+                            // {
+                            //     label: 'Stack Overflow',
+                            //     href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                            // },
+                            // {
+                            //     label: 'Discord',
+                            //     href: 'https://discordapp.com/invite/docusaurus',
+                            // },
+                            // {
+                            //     label: 'Twitter',
+                            //     href: 'https://twitter.com/docusaurus',
+                            // },
                         ],
                     },
                     {
-                        title: 'More',
+                        title: 'Περισσότερα',
                         items: [
                             {
-                                label: 'Blog',
-                                to: '/blog',
-                            },
-                            {
                                 label: 'GitHub',
-                                href: 'https://github.com/facebook/docusaurus',
+                                href: 'https://github.com/adreaskar/ecmascript.gr',
                             },
                         ],
                     },
