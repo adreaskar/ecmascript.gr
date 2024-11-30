@@ -1,1 +1,1 @@
-# Welcome to ecmascript.gr
+# Welcome to javascript.gr

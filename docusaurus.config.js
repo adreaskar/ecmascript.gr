@@ -8,12 +8,12 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-    title: 'ecmascript.gr',
+    title: 'javascript.gr',
     tagline: 'Οδηγός για την JavaScript στα Ελληνικά',
-    favicon: 'img/ecmascript.png',
+    favicon: 'img/javascript-gr.png',
 
     // Set the production url of your site here
-    url: 'https://ecmascript.gr',
+    url: 'https://javascript.gr',
     // Set the /<baseUrl>/ pathname under which your site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
     baseUrl: '/',
@@ -21,7 +21,7 @@ const config = {
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
     organizationName: 'adreaskar', // Usually your GitHub org/user name.
-    projectName: 'ecmascript.gr', // Usually your repo name.
+    projectName: 'javascript.gr', // Usually your repo name.
 
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
@@ -99,8 +99,8 @@ const config = {
             image: 'img/docusaurus-social-card.jpg',
             navbar: {
                 logo: {
-                    alt: 'ecmascript.gr logo',
-                    src: 'img/ecmascript.png',
+                    alt: 'javascript.gr logo',
+                    src: 'img/javascript-gr.png',
                 },
                 items: [
                     {
@@ -151,21 +151,13 @@ const config = {
                         title: 'Community',
                         items: [
                             {
-                                label: 'Coming soon...',
-                                to: '/',
+                                label: 'GreeceJS',
+                                to: 'https://greecejs.org/',
                             },
-                            // {
-                            //     label: 'Stack Overflow',
-                            //     href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-                            // },
-                            // {
-                            //     label: 'Discord',
-                            //     href: 'https://discordapp.com/invite/docusaurus',
-                            // },
-                            // {
-                            //     label: 'Twitter',
-                            //     href: 'https://twitter.com/docusaurus',
-                            // },
+                            {
+                                label: 'Meetup',
+                                to: 'https://www.meetup.com/greecejs/',
+                            },
                         ],
                     },
                     {
@@ -178,7 +170,7 @@ const config = {
                         ],
                     },
                 ],
-                copyright: `An open source project by Andreas Karabetian | ${new Date().getFullYear()} ecmascript.gr`,
+                copyright: `An open source project by Andreas Karabetian | ${new Date().getFullYear()} - javascript.gr`,
             },
             prism: {
                 theme: prismThemes.github,

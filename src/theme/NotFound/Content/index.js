@@ -36,7 +36,7 @@ export default function NotFoundContent({ className }) {
                         <br />
                         <br />
                         Στείλτε μας ένα email στο{' '}
-                        <a href="mailto:hey@ecmascript.gr">hey@ecmascript.gr</a>
+                        <a href="mailto:hey@javascript.gr">hey@javascript.gr</a>
                     </p>
                 </div>
             </div>
