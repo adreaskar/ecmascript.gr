@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap');
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+    --ifm-color-primary: #ee7903;
+    --ifm-color-primary-dark: #2d8a57;
+    --ifm-color-primary-darker: #277148;
+    --ifm-color-primary-darkest: #205d3b;
+    --ifm-color-primary-light: #eea703;
+    --ifm-color-primary-lighter: #359962;
+    --ifm-color-primary-lightest: #3cad6e;
+    --ifm-color-grey: #fbfbfb;
+    --ifm-border-color: #eaeaea;
+    --ifm-code-font-size: 95%;
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+    /* --ifm-color-primary: #6bb7ff; */
+    --ifm-color-primary: #f8dc3d;
+    --ifm-color-primary-dark: #21af90;
+    --ifm-color-primary-darker: #1fa588;
+    --ifm-color-primary-darkest: #1a8870;
+    /* --ifm-color-primary-light: #4ca2f2; */
+    --ifm-color-primary-light: #f8dc3d;
+    --ifm-color-primary-lighter: #32d8b4;
+    --ifm-color-primary-lightest: #4fddbf;
+    --ifm-color-grey: #242526;
+    --ifm-border-color: #404141;
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+    --search-local-highlight-color: #f8dc3d62;
+}
+
+/* Custom font */
+body {
+    font-family: 'Noto Sans', sans-serif;
+    font-optical-sizing: auto;
+    font-variation-settings: 'wdth' 100;
+}
+
+/* Custom font size */
+h1,
+h2,
+h3 {
+    font-weight: 600;
+}
+.headingContainer {
+    font-family: 'Sofia Sans', sans-serif;
+    font-optical-sizing: auto;
+}
+
+/* Custom stripe */
+.fade-stripe {
+    background: linear-gradient(
+        90deg,
+        #0000 0,
+        var(--ifm-color-primary-light) 45%,
+        var(--ifm-color-primary-light) 55%,
+        #0000 100%
+    );
+}
+
+/* Navbar custom spacing */
+.navbar__logo {
+    margin-right: 0;
+}
+
+/* First level of sidebar */
+.menu__list-item-collapsible .menu__link,
+.theme-doc-sidebar-item-link-level-1 {
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+/* Second level of sidebar */
+.theme-doc-sidebar-item-link-level-2 {
+    font-weight: 400;
+    font-size: 0.9em;
+}
+
+/* Custom active list item style */
+.menu__link--active:not(.menu__link--sublist) {
+    border-right: 2px var(--ifm-color-primary) solid;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    font-weight: 600;
+}
+.menu__link--active,
+.menu__link--active:hover {
+    color: var(--ifm-color-primary);
+}
+
+/* Custom code block style */
+.token.keyword {
+    font-style: normal !important;
+}
+
+/* Themed images for md */
+[data-theme='light'] img[src$='#es-dark-mode-only'],
+[data-theme='dark'] img[src$='#es-light-mode-only'] {
+    display: none;
+}
+
+/* Media queries */
+@media screen and (min-width: 1024px) {
+    .docs-doc-page .container {
+        padding-top: 2rem !important;
+        padding-left: 5rem;
+    }
+}
