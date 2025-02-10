@@ -155,7 +155,7 @@ const config = {
                                 to: '/docs-language/intro',
                             },
                             {
-                                label: '2. Brower',
+                                label: '2. Browser',
                                 to: '/docs-browser/intro',
                             },
                         ],
