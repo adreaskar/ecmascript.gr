@@ -103,8 +103,14 @@ const config = {
     themeConfig:
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
-            // Replace with your project's social card
-            image: 'img/docusaurus-social-card.jpg',
+            image: 'img/social-banner.png',
+            metadata: [
+                {
+                    name: 'keywords',
+                    content:
+                        'javascript,programming,developer,guide,turorial,documentation,programming language,web,web development,nodejs,greek,greece,greecejs',
+                },
+            ],
             colorMode: {
                 defaultMode: 'dark',
             },
