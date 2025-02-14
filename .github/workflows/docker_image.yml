@@ -1,8 +1,9 @@
 name: Build and push Docker image to dockerhub
 
 on:
-  push:
-    branches: [ "master" ]
+  workflow_run:
+        workflows: ['Test Application Build']
+        types: [completed]
     
 jobs:
 
