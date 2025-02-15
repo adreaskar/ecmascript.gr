@@ -102,6 +102,6 @@ docker-compose up -d
 
 Μπορείτε επίσης να:
 
--   [Ανοίξετε ένα issue](https://github.com/adreaskar/javascript.gr/issues)
--   [Στείλετε ένα pull request](https://github.com/adreaskar/javascript.gr/pulls)
+-   [Ανοίξτε ένα issue](https://github.com/adreaskar/javascript.gr/issues)
+-   [Στείλτε ένα pull request](https://github.com/adreaskar/javascript.gr/pulls)
 -   [Συμμετέχετε στις συζητήσεις](https://github.com/adreaskar/javascript.gr/discussions)
