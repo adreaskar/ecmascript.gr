@@ -88,13 +88,26 @@ const config = {
                 },
                 blog: {
                     showReadingTime: true,
-                    // Please change this to your repo.
                     // Remove this to remove the "edit this page" links.
                     // editUrl:
                     //     'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
                 },
                 theme: {
                     customCss: './src/css/custom.css',
+                },
+                sitemap: {
+                    lastmod: 'date',
+                    changefreq: 'weekly',
+                    priority: 0.5,
+                    ignorePatterns: ['/tags/**'],
+                    filename: 'sitemap.xml',
+                    createSitemapItems: async (params) => {
+                        const { defaultCreateSitemapItems, ...rest } = params;
+                        const items = await defaultCreateSitemapItems(rest);
+                        return items.filter(
+                            (item) => !item.url.includes('/page/')
+                        );
+                    },
                 },
             }),
         ],
