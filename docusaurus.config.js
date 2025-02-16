@@ -109,6 +109,10 @@ const config = {
                         );
                     },
                 },
+                gtag: {
+                    trackingID: 'G-CQ5N1WZWYC',
+                    anonymizeIP: true,
+                },
             }),
         ],
     ],
