@@ -100,8 +100,4 @@ docker-compose up -d
 
 Για οποιαδήποτε ερώτηση, παρατήρηση ή πρόταση, μπορείτε να στείλετε ένα email στο hey@javascript.gr.
 
-Μπορείτε επίσης να:
-
--   [Ανοίξτε ένα issue](https://github.com/adreaskar/javascript.gr/issues)
--   [Στείλτε ένα pull request](https://github.com/adreaskar/javascript.gr/pulls)
--   [Συμμετέχετε στις συζητήσεις](https://github.com/adreaskar/javascript.gr/discussions)
+Μπορείτε επίσης να [συμμετέχετε στις συζητήσεις](https://github.com/adreaskar/javascript.gr/discussions)
