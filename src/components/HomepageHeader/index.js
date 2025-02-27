@@ -1,9 +1,8 @@
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import ThemedImage from '@theme/ThemedImage';
 import { Typewriter } from 'react-simple-typewriter';
 import { useState, useEffect } from 'react';
-import { ArrowUpRight, Star } from 'lucide-react';
+import { HeartHandshake, Star, GitFork } from 'lucide-react';
 
 export default function HomepageHeader() {
     return (
@@ -90,34 +89,56 @@ function HeroButtons() {
     };
 
     const [stars, setStars] = useState(null);
+    const [forks, setForks] = useState(null);
+    const [contributors, setContributors] = useState(null);
 
     useEffect(() => {
         fetch('https://api.github.com/repos/adreaskar/javascript.gr')
             .then((res) => res.json())
             .then((json) => {
+                // console.log(json);
                 setStars(json.stargazers_count);
+                setForks(json.forks_count);
+            });
+
+        fetch(
+            `https://api.github.com/repos/adreaskar/javascript.gr/contributors`,
+            {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            }
+        )
+            .then((res) => res.json())
+            .then((array) => {
+                setContributors(array.length);
             });
     }, []);
 
     return (
-        <div
-            onClick={() =>
-                sendToURL('https://github.com/adreaskar/javascript.gr')
-            }
-            className="hidden lg:flex items-center px-3 py-2 rounded-md bg-[var(--ifm-color-primary-light)] mt-7 w-max hover:cursor-pointer"
-        >
-            <Star
-                size={17}
-                className="mr-1 text-[var(--ifm-hero-background-color)] fill-[var(--ifm-hero-background-color)]"
-            />
-            <span className="text-[var(--ifm-hero-background-color)] text-lg xl:text-xl font-semibold">
-                {stars} GitHub
-            </span>
-            <ArrowUpRight
-                size={20}
-                strokeWidth={2.5}
-                className="ml-1 text-[var(--ifm-hero-background-color)]"
-            />
+        <div className="text-base md:text-lg xl:text-xl font-semibold flex gap-5 mt-6 text-[var(--ifm-color-primary-light)]">
+            <div className="flex items-center py-2 w-max ">
+                <Star size={17} className="mr-1" />
+                <span
+                    onClick={() =>
+                        sendToURL('https://github.com/adreaskar/javascript.gr')
+                    }
+                    className="hover:cursor-pointer hover:underline"
+                >
+                    {stars} stars
+                </span>
+            </div>
+
+            <div className="flex items-center py-2  w-max ">
+                <GitFork size={17} className="mr-1" />
+                <span>{forks} forks</span>
+            </div>
+
+            <div className="flex items-center py-2  w-max ">
+                <HeartHandshake size={17} className="mr-1" />
+                <span>{contributors} contributors</span>
+            </div>
         </div>
     );
 }
