@@ -63,7 +63,7 @@ function Feature({ Icon, title, description, link }) {
 
 export default function HomepageFeatures() {
     return (
-        <section className="items-center py-20 px-5 lg:px-2 w-full">
+        <section className="items-center py-28 px-5 lg:px-2 w-full">
             <div className="container">
                 <div className="row gap-10">
                     {FeatureList.map((props, idx) => (
