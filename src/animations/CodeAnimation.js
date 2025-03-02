@@ -32,7 +32,7 @@ const CodeAnimation = () => {
                     <motion.div
                         key={index}
                         className={`transition-colors duration-300 rounded px-2 -mx-2 ${
-                            currentLine === index ? 'bg-[#f8dc3d30]' : ''
+                            currentLine === index ? 'bg-[#f8dc3d15]' : ''
                         }`}
                         initial={{ opacity: 0, x: 10 }}
                         animate={{ opacity: 1, x: 0 }}

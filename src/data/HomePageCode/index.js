@@ -8,6 +8,13 @@ export const codeContent = [
         ],
     },
     {
+        indent: 0,
+        content: [
+            { text: '    ', color: '' },
+            { text: '// Κατασκευαστής', color: 'text-[#586691]' },
+        ],
+    },
+    {
         indent: 1,
         content: [
             { text: 'constructor ', color: 'text-purple-400' },
@@ -42,7 +49,10 @@ export const codeContent = [
     },
     {
         indent: 0,
-        content: [{ text: '', color: '' }],
+        content: [
+            { text: '    ', color: '' },
+            { text: '// Μέθοδος', color: 'text-[#586691]' },
+        ],
     },
     {
         indent: 1,
@@ -59,7 +69,13 @@ export const codeContent = [
             { text: '.', color: 'text-white' },
             { text: 'log', color: 'text-purple-400' },
             { text: '(', color: 'text-white' },
-            { text: '"Hello there!"', color: 'text-green-400' },
+            { text: "`Hello, I'm ", color: 'text-green-400' },
+            { text: '${', color: 'text-white' },
+            { text: 'this', color: 'text-orange-300' },
+            { text: '.', color: 'text-white' },
+            { text: 'name', color: 'text-blue-300' },
+            { text: '}', color: 'text-white' },
+            { text: '!`', color: 'text-green-400' },
             { text: ')', color: 'text-white' },
         ],
     },
@@ -73,30 +89,46 @@ export const codeContent = [
     },
     {
         indent: 0,
-        content: [{ text: '', color: '' }],
+        content: [
+            { text: '// Δημιουργία αντικειμένου', color: 'text-[#586691]' },
+        ],
     },
     {
         indent: 0,
         content: [
             { text: 'const ', color: 'text-purple-400' },
-            { text: 'andreas', color: 'text-yellow-300' },
+            { text: 'person', color: 'text-yellow-300' },
             { text: ' = ', color: 'text-white' },
             { text: 'new ', color: 'text-purple-400' },
             { text: 'Person', color: 'text-yellow-300' },
             { text: '(', color: 'text-white' },
-            { text: "'John'", color: 'text-green-400' },
+            { text: "'Andreas'", color: 'text-green-400' },
             { text: ', ', color: 'text-white' },
-            { text: '30', color: 'text-green-400' },
+            { text: '25', color: 'text-green-400' },
             { text: ')', color: 'text-white' },
         ],
     },
     {
         indent: 0,
         content: [
-            { text: 'andreas', color: 'text-yellow-300' },
+            { text: 'person', color: 'text-yellow-300' },
             { text: '.', color: 'text-white' },
             { text: 'sayHello', color: 'text-purple-400' },
             { text: '()', color: 'text-white' },
+            { text: '    ', color: '' },
+        ],
+    },
+    {
+        indent: 0,
+        content: [{ text: '', color: '' }],
+    },
+    {
+        indent: 0,
+        content: [
+            {
+                text: "// Εκτύπωση: Hello, I'm Andreas!",
+                color: 'text-[#586691]',
+            },
         ],
     },
 ];
