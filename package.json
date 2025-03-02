@@ -20,6 +20,7 @@
     "@mdx-js/react": "^3.0.0",
     "autoprefixer": "^10.4.19",
     "clsx": "^2.0.0",
+    "framer-motion": "^12.4.7",
     "lucide-react": "^0.403.0",
     "lunr": "^2.3.9",
     "postcss": "^8.4.39",
